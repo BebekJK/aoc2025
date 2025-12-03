@@ -44,7 +44,6 @@ def count_invalid(a, b, max_multiple=2):
         
         if last_invalid < first_invalid:
             continue
-        print(f"multiple: {multiple}, first_invalid: {first_invalid}, last_invalid: {last_invalid}")
         ans += sum([int(str(i) * multiple) if (len(str(i)) == 1 or (is_invalid(str(i)) == False)) else 0 for i in range(first_invalid, last_invalid + 1)])
     return ans
 
